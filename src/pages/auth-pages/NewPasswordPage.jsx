@@ -1,5 +1,5 @@
 const NewPasswordPage = () => {
-    return <div>NewPasswordPage</div>;
-};
+  return <div>NewPasswordPage</div>
+}
 
-export default NewPasswordPage;
+export default NewPasswordPage

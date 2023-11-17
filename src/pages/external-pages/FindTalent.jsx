@@ -1,5 +1,5 @@
 const findTalent = () => {
-    return <div>findTalent</div>;
-};
+  return <div>findTalent</div>
+}
 
-export default findTalent;
+export default findTalent

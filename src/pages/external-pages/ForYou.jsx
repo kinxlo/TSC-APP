@@ -1,5 +1,5 @@
 const ForYou = () => {
-    return <div>ForYou</div>;
-};
+  return <div>ForYou</div>
+}
 
-export default ForYou;
+export default ForYou

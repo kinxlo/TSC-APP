@@ -1,9 +1,9 @@
-import { configureStore } from "@reduxjs/toolkit";
-import { setupListeners } from "@reduxjs/toolkit/query";
-import { persistStore } from "redux-persist";
+import { configureStore } from '@reduxjs/toolkit'
+import { setupListeners } from '@reduxjs/toolkit/query'
+import { persistStore } from 'redux-persist'
 
-import { apiSlice } from "./api/apiSlice";
-import appReducer from "./api/appSlice";
+import { apiSlice } from './api/apiSlice'
+import appReducer from './api/appSlice'
 
 // const persistConfig = {
 //     key: "root",
@@ -15,19 +15,19 @@ import appReducer from "./api/appSlice";
 // const persistedReducer = persistReducer(persistConfig, authReducer);
 
 export const store = configureStore({
-    reducer: {
-        [apiSlice.reducerPath]: apiSlice.reducer,
+  reducer: {
+    [apiSlice.reducerPath]: apiSlice.reducer,
 
-        app: appReducer,
-    },
-    middleware: (getDefaultMiddleware) =>
-        getDefaultMiddleware({
-            serializableCheck: false,
-        }).concat(apiSlice.middleware),
-    // devTools: process.env.NODE_ENV !== 'production',
+    app: appReducer,
+  },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: false,
+    }).concat(apiSlice.middleware),
+  // devTools: process.env.NODE_ENV !== 'production',
 
-    devTools: import.meta.env.NODE_ENV !== "production",
-});
+  devTools: import.meta.env.NODE_ENV !== 'production',
+})
 
-setupListeners(store.dispatch);
-export const persistor = persistStore(store);
+setupListeners(store.dispatch)
+export const persistor = persistStore(store)
