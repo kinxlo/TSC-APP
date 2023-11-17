@@ -1,7 +1,7 @@
 function App() {
     return (
         <>
-            <h1>TSC-APP</h1>
+            <h1 className={`text-danger`}>TSC-APP</h1>
         </>
     );
 }
