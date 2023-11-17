@@ -15,9 +15,9 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "npm run lint:fix",
-      "npm run prettier:check"
+    "*.{js,css,scss,ts,tsx,jsx,md}": [
+      "prettier --write",
+      "eslint --fix"
     ]
   },
   "dependencies": {
