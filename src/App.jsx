@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
-import { DashboardHome, FinTalent, Login } from './pages'
+import { DashboardHome, FinTalent, Login, Community } from './pages'
 import { DashboardLayout } from './layout'
 
 export function App() {
@@ -10,6 +10,7 @@ export function App() {
 
       {/* external pages */}
       <Route index element={<FinTalent />} />
+      <Route path='/community' element={<Community />} />
 
       {/* dashboard */}
       <Route path='/dashboard' element={<DashboardLayout />}>
