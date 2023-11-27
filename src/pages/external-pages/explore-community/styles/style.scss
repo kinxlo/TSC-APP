@@ -1,0 +1,95 @@
+
+
+.navAndFoot{
+  background-color: #1f2666;
+  padding: 0 100px 0 100px;
+}
+
+.nav-texts {
+  font-size: 1.125rem !important;
+}
+
+.hero-section {
+  min-height: 663px;
+  padding: 0 100px 0 100px;
+}
+
+.members-section {
+  padding: 0 100px 0 100px;
+
+  input {
+    max-width: 9rem;
+  }
+}
+
+
+.custom-card {
+  background-color: #d2d4e0 !important;
+}
+.dropdown-item:hover {
+  background-color: #0266F4 !important;
+  color: #ffffff !important; 
+}
+@media only screen and (max-width: 768px) {
+  .navAndFoot{
+    padding: 0 20px 0 20px;
+
+    Img {
+      max-width: 9rem !important;
+    }
+  }
+
+  .hero-section {
+    min-height: 513px;
+    padding: 0 20px 0 20px !important;
+    h1 {
+      font-size: 2rem !important;
+    }
+
+    .hero-p1 {
+      font-size: 1.5rem !important;
+    }
+
+    .hero-p2 {
+      font-size: 1rem !important;
+    }
+  }
+  .members-section {
+    padding: 0 20px 0 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .navAndFoot{
+    padding: 0 20px 0 20px;
+  }
+
+  .hide-element {
+    display: none !important;
+  }
+  .hero-section {
+    padding: 0 20px 0 20px;
+    h1 {
+      font-size: 2.5rem !important;
+    }
+
+    .hero-p1 {
+      font-size: 2rem !important;
+    }
+
+    .hero-p2 {
+      font-size: 1.5rem !important;
+    }
+  }
+
+  .members-section {
+    padding: 0 20px 0 20px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .hero-section {
+    min-height: 663px;
+    padding: 0 100px 0 100px !important;
+  }
+}
