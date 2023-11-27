@@ -1,13 +1,16 @@
+/* eslint-disable react/no-unescaped-entities */
 import React, { useEffect, useState } from 'react'
-import { Button, Image, Col, Row, Container } from 'react-bootstrap'
+import { Image, Col, Row } from 'react-bootstrap'
 import axios from 'axios'
 import './styles/style.scss'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import Dropdown from 'react-bootstrap/Dropdown'
 import { IoChevronDownSharp } from 'react-icons/io5'
-import { CiMenuBurger } from 'react-icons/ci'
+// import { CiMenuBurger } from 'react-icons/ci'
 import { MdOutlineNavigateNext } from 'react-icons/md'
-import { FaInstagram, FaLinkedin, FaTwitter, FaFacebook } from 'react-icons/fa'
+// import { FaInstagram, FaLinkedin, FaTwitter, FaFacebook } from 'react-icons/fa'
+import Footer from '../../../components/Footer/Footer'
+import NavBar from '../../../components/NavBar/NavBar'
 
 export default function Community() {
   const [members, setMembers] = useState([])
@@ -16,16 +19,17 @@ export default function Community() {
   const [searchTerm, setSearchTerm] = useState('')
   const [currentStage, setCurrentStage] = useState(1) // Assuming you have a state for the current stage
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get('http://localhost:3001/members')
-        setMembers(response.data)
-      } catch (error) {
-        console.error('Error fetching data:', error)
-      }
+  const fetchData = async () => {
+    try {
+      const response = await axios.get('/members.json')
+      // console.log(response.data.members)
+      setMembers(response.data.members)
+    } catch (error) {
+      console.error('Error fetching data:', error)
     }
+  }
 
+  useEffect(() => {
     fetchData()
   }, [])
 
@@ -62,7 +66,7 @@ export default function Community() {
 
   return (
     <div>
-      <div className='navAndFoot d-flex justify-content-between align-items-center nav-texts' style={{ height: '97px' }}>
+      {/* <div className='navAndFoot d-flex justify-content-between align-items-center nav-texts' style={{ height: '97px' }}>
         <Link>
           <Image src='https://res.cloudinary.com/techbro/image/upload/v1700656255/TSA_community_1_dchbaz.svg' />
         </Link>
@@ -79,7 +83,8 @@ export default function Community() {
           <CiMenuBurger className='text-white d-lg-none' fontSize={40} />
         </div>
         <CiMenuBurger className='d-md-none d-lg-none d-block text-white' fontSize={40} />
-      </div>
+      </div> */}
+      <NavBar />
       <div className='hero-section d-flex flex-column justify-content-center align-items-center' style={bgImage}>
         <div className='text-center'>
           <h1 className='text-white' style={{ fontSize: '3rem' }}>
@@ -175,7 +180,8 @@ export default function Community() {
           )}
         </div>
       </div>
-      <Row className='navAndFoot text-white gap-5 m-0' style={{ paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
+      <Footer />
+      {/* <Row className='navAndFoot text-white gap-5 m-0' style={{ paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
         <Col>
           <Image className='pb-2' src='https://res.cloudinary.com/techbro/image/upload/v1700656255/TSA_community_1_dchbaz.svg' />
           <p>Welcome to Tech studio community hub, where you connect with fellow tech enthusiasts, share knowledge, and explore endless possibilities.</p>
@@ -218,7 +224,7 @@ export default function Community() {
             <FaLinkedin />
           </span>
         </div>
-      </Row>
+      </Row> */}
     </div>
   )
 }

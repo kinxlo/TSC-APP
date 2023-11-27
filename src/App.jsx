@@ -1,6 +1,8 @@
 import { Route, Routes } from 'react-router-dom'
-import { DashboardHome, FinTalent, Login, Community } from './pages'
+import { DashboardHome, Login, Community } from './pages'
 import { DashboardLayout } from './layout'
+import './App.css'
+import Home from './pages/external-pages/landing-page/Home/Home'
 
 export function App() {
   return (
@@ -9,7 +11,7 @@ export function App() {
       <Route path={`/login`} element={<Login />} />
 
       {/* external pages */}
-      <Route index element={<FinTalent />} />
+      <Route index element={<Home />} />
       <Route path='/community' element={<Community />} />
 
       {/* dashboard */}
