@@ -7,7 +7,7 @@ import Dropdown from 'react-bootstrap/Dropdown'
 import { IoChevronDownSharp } from 'react-icons/io5'
 import { CiMenuBurger } from 'react-icons/ci'
 import { MdOutlineNavigateNext } from 'react-icons/md'
-import { FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaTwitter, FaFacebook } from 'react-icons/fa'
 
 export default function Community() {
   const [members, setMembers] = useState([])
@@ -189,12 +189,35 @@ export default function Community() {
           </div>
         </Col>
         <Col>
-          <p className='fw-bold d-flex flex-column' style={{ marginTop: '1.7rem' }}>
+          <p className='fw-bold d-flex flex-column pb-4' style={{ marginTop: '1.7rem' }}>
             Subscribe to our newsletter
           </p>
+          <input
+            className='border border-secondary rounded'
+            type='text'
+            placeholder='Email Address'
+            id='name'
+            name='name'
+            value={searchTerm}
+            onChange={handleSearch}
+          />
         </Col>
         <hr className='border border-white bg-white my-5' />
-        <div><span>Terms and pol</span></div>
+        <div className='d-flex justify-content-md-center justify-content-start align-items-center gap-5'>
+          <span>Terms and policy</span>
+          <span>
+            <FaTwitter />
+          </span>
+          <span>
+            <FaInstagram />
+          </span>
+          <span>
+            <FaFacebook />
+          </span>
+          <span>
+            <FaLinkedin />
+          </span>
+        </div>
       </Row>
     </div>
   )
