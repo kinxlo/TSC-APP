@@ -7,6 +7,7 @@ import Dropdown from 'react-bootstrap/Dropdown'
 import { IoChevronDownSharp } from 'react-icons/io5'
 import { CiMenuBurger } from 'react-icons/ci'
 import { MdOutlineNavigateNext } from 'react-icons/md'
+import { FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 export default function Community() {
   const [members, setMembers] = useState([])
@@ -192,6 +193,8 @@ export default function Community() {
             Subscribe to our newsletter
           </p>
         </Col>
+        <hr className='border border-white bg-white my-5' />
+        <div><span>Terms and pol</span></div>
       </Row>
     </div>
   )
