@@ -5,7 +5,7 @@ import "../styles/DropDown.css";
 const DropDown = () => {
   const [toggleDropdown, setToggleDropdown] = useState(false);
   const [selection, setSelection] = useState("Select Community");
-  const [arrowDropdown, setArrowDropdown] = useState([
+  const [arrowDropdown] = useState([
     "Data Analysis",
     "Web Development",
     "Product Design",

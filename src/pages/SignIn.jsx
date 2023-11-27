@@ -7,8 +7,12 @@ import facebook from '../assets/facebook.svg'
 import google from '../assets/google.svg'
 import signinVector from '../assets/Vector photo sign in.svg'
 import '../styles/SignIn.scss'
+import { useState } from 'react'
+import ShowEye from '../components/ShowEye'
 
 const SignIn = () => {
+  const [passwordVisible, setPasswordVisible] = useState(false);
+
   return (
     <div className='sign-in gap-5 d-flex position-relative '>
       <div
@@ -42,7 +46,7 @@ const SignIn = () => {
           <div className='sign-in-content-padding'>
             <div className='mb-4'>
               <h3 className='fw-bold'>Welcome Back</h3>
-              <p>Let's Help You Get Into Your Account.</p>
+              <p>Let&apos;s Help You Get Into Your Account.</p>
             </div>
             <form action=''>
               <div className='d-flex flex-column gap-1 mb-3'>
@@ -61,11 +65,11 @@ const SignIn = () => {
                   <input className='w-100 p-2 rounded border-1' name='password' type={passwordVisible ? 'text' : 'password'} id='password' />
 
                   <ShowEye
-                    eyeState={passwordVisible}
-                    updateEye={setPasswordVisible}
-                    style={{
-                      cursor: 'pointer',
-                    }}
+                  eyeState={passwordVisible}
+                  updateEye={setPasswordVisible}
+                  style={{
+                    cursor: 'pointer',
+                  }}
                   />
                 </div>
               </div>
