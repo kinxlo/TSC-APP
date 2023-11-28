@@ -1,0 +1,50 @@
+.sign-up-main {
+  min-height: 100vh;
+}
+
+.sign-up-frame-1 {
+}
+
+.sign-up-last-name {
+  width: 14rem;
+}
+
+.tsa-logo {
+  top: 30px;
+  left: 280px;
+  width: 130px;
+}
+
+.signup-vector {
+  width: 40%;
+  top: 180px;
+}
+
+.sign-up-section {
+  background: rgba(217, 217, 217, 1);
+  border-top: 8px solid rgba(2, 102, 244, 1);
+  margin: auto;
+}
+
+.input-p {
+  font-size: 9px;
+  margin-bottom: 0px;
+}
+
+.register-p {
+  font-weight: 450;
+}
+
+.email-info {
+  font-size: 10px;
+  color: gray;
+}
+
+.close-eye {
+  top: 9px;
+  right: 15px;
+}
+
+select {
+  cursor: pointer;
+}

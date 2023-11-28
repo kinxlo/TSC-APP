@@ -1,0 +1,35 @@
+.arrow-down {
+    top: -4px;
+    right: -260px;
+    font-size: 30px;
+    color: gray;
+}
+
+.dropdown-options {
+    list-style: none;
+    text-align: left;
+    background-color: white;
+}
+
+.dropdown-options li {
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    
+}
+
+.dropdown-options li:hover {
+    background-color: rgba(2, 102, 244, 1);
+    color: white;
+  }
+
+.dropdown-cover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.selection-p{
+    width: 11rem;
+}
+
+.options-toggle{
+    
+}
