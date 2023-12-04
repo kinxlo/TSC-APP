@@ -1,0 +1,44 @@
+// @use '@scss/utils/functions' as fn;
+@use '../../scss/utils/functions' as fn;
+@use '../../scss/global//colors' as color;
+
+.card {
+  width: fn.rem(386);
+  padding: fn.rem(10);
+  // height: fn.rem(272);
+
+  .image {
+    border: 1px solid color.$light-grey;
+    border-radius: fn.rem(10);
+    background: color.$light-grey; // this is for ola to re-edit...
+  }
+
+  .description {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .name {
+      display: flex;
+      align-items: center;
+      gap: fn.rem(10);
+
+      .avatar {
+        width: fn.rem(32);
+        height: fn.rem(32);
+        border-radius: 100%;
+        overflow: hidden;
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .like,
+    .view {
+      display: flex;
+      align-items: center;
+      gap: fn.rem(10);
+    }
+  }
+}

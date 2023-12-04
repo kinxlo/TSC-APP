@@ -1,3 +1,7 @@
+/* THIS IS A CSS FILE TO STYLE ACTIVE INTERACTIONS. E.G
+-- IF I CLICK A BUTTON HOW DO I WANT IT TO LOOK LIKE.
+*/
+
 .admin-tab .active {
   font-size: 1rem;
   background-color: transparent;
