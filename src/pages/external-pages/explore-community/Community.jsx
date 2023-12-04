@@ -1,8 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { useEffect, useState } from 'react'
-import { Image, Col, Row } from 'react-bootstrap'
+import { Image, Col, Row, Container } from 'react-bootstrap'
 import axios from 'axios'
-import './styles/style.scss'
+import './scss/style.scss'
 // import { Link } from 'react-router-dom'
 import Dropdown from 'react-bootstrap/Dropdown'
 import { IoChevronDownSharp } from 'react-icons/io5'
@@ -66,27 +66,9 @@ export default function Community() {
 
   return (
     <div>
-      {/* <div className='navAndFoot d-flex justify-content-between align-items-center nav-texts' style={{ height: '97px' }}>
-        <Link>
-          <Image src='https://res.cloudinary.com/techbro/image/upload/v1700656255/TSA_community_1_dchbaz.svg' />
-        </Link>
-        <div className='d-md-flex d-lg-flex gap-5 d-none'>
-          <Link className='text-white  fw-bold hide-element'>Explore Community</Link>
-          <Link className='text-white hide-element'>Find Talent</Link>
-          <Link className='text-white hide-element'>For You</Link>
-        </div>
-        <div className='d-md-flex d-lg-flex d-none gap-5 align-items-center'>
-          <Button className='fw-bold' style={{ width: '143px' }}>
-            Register
-          </Button>
-          <Link className='fw-bold text-white'>Login</Link>
-          <CiMenuBurger className='text-white d-lg-none' fontSize={40} />
-        </div>
-        <CiMenuBurger className='d-md-none d-lg-none d-block text-white' fontSize={40} />
-      </div> */}
-      <NavBar />
-      <div className='hero-section d-flex flex-column justify-content-center align-items-center' style={bgImage}>
-        <div className='text-center'>
+      {/* hero sectioin */}
+      <div className='hero-section py-60 d-flex flex-column justify-content-center align-items-center' style={bgImage}>
+        <Container className='text-center'>
           <h1 className='text-white' style={{ fontSize: '3rem' }}>
             Explore Community
           </h1>
@@ -96,10 +78,12 @@ export default function Community() {
           <p className='text-white hero-p2' style={{ fontSize: '2.188rem' }}>
             Whether you're seeking collaboration, finding talents, or simply looking to expand your network, you've come to the right place.{' '}
           </p>
-        </div>
+        </Container>
       </div>
-      <div className='members-section pt-5 d-flex flex-column gap-5'>
+      {/* list of people */}
+      <Container className='members-section pt-5 d-flex flex-column gap-5'>
         <div className='py-5 d-flex justify-content-between'>
+          {/* drop down */}
           <Dropdown>
             <Dropdown.Toggle variant='white' id='dropdown-basic' className='border-primary text-primary fw-bold px-5'>
               {selectedField ? `${fieldDisplayName}` : 'Select Field'}
@@ -179,52 +163,7 @@ export default function Community() {
             </div>
           )}
         </div>
-      </div>
-      <Footer />
-      {/* <Row className='navAndFoot text-white gap-5 m-0' style={{ paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
-        <Col>
-          <Image className='pb-2' src='https://res.cloudinary.com/techbro/image/upload/v1700656255/TSA_community_1_dchbaz.svg' />
-          <p>Welcome to Tech studio community hub, where you connect with fellow tech enthusiasts, share knowledge, and explore endless possibilities.</p>
-        </Col>
-        <Col className='d-flex flex-column gap-2 align-items-center' style={{ marginTop: '1.5rem' }}>
-          <div className='d-flex flex-column gap-2'>
-            <span className='fw-bold pb-1'>Quick Links</span>
-            <span className='fw-bold '>Community</span>
-            <span className=''>Find Talent</span>
-            <span className=''>Go to Main Website</span>
-          </div>
-        </Col>
-        <Col>
-          <p className='fw-bold d-flex flex-column pb-4' style={{ marginTop: '1.7rem' }}>
-            Subscribe to our newsletter
-          </p>
-          <input
-            className='border border-secondary rounded'
-            type='text'
-            placeholder='Email Address'
-            id='name'
-            name='name'
-            value={searchTerm}
-            onChange={handleSearch}
-          />
-        </Col>
-        <hr className='border border-white bg-white my-5' />
-        <div className='d-flex justify-content-md-center justify-content-start align-items-center gap-5'>
-          <span>Terms and policy</span>
-          <span>
-            <FaTwitter />
-          </span>
-          <span>
-            <FaInstagram />
-          </span>
-          <span>
-            <FaFacebook />
-          </span>
-          <span>
-            <FaLinkedin />
-          </span>
-        </div>
-      </Row> */}
+      </Container>
     </div>
   )
 }

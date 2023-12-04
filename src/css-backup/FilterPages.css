@@ -1,4 +1,4 @@
-.findpages {
+/* .findpages {
   min-height: 100vh;
 }
 
@@ -35,17 +35,17 @@
   top: -2px;
 }
 .container {
-  /* display: flex;
+  display: flex;
   padding: 20px;
-  flex-wrap: wrap; */
+  flex-wrap: wrap;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* padding: 20px; */
+  padding: 20px;
 }
 .box {
   width: 100%;
   flex-basis: 386px;
   flex-grow: 1;
   padding: 10px;
-  /* height: 316px; */
-}
+  height: 316px;
+} */
