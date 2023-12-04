@@ -1,0 +1,51 @@
+/* .findpages {
+  min-height: 100vh;
+}
+
+.filterdiv1 {
+  border-bottom: 2px solid grey;
+  margin-bottom: 10px;
+}
+
+.filterdiv2 {
+  list-style: none;
+}
+.filterdiv2 li {
+  transition: 0.3s ease-in-out;
+  font-family: Open Sans;
+  font-size: 18px;
+  font-weight: 700;
+}
+.filterdiv2 li:hover {
+  background-color: var(--dark-blue);
+  padding: 0px 8px;
+  font-family: cursive;
+}
+.filterdiv3 {
+  font-family: Open Sans;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 41px;
+  letter-spacing: 0em;
+  font-family: Open Sans;
+  text-align: left;
+}
+.input1 {
+  left: 26px;
+  top: -2px;
+}
+.container {
+  display: flex;
+  padding: 20px;
+  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 20px;
+}
+.box {
+  width: 100%;
+  flex-basis: 386px;
+  flex-grow: 1;
+  padding: 10px;
+  height: 316px;
+} */
