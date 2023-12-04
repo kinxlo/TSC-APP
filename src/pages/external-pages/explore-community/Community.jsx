@@ -14,7 +14,7 @@ export default function Community() {
   const [selectedField, setSelectedField] = useState(null)
   const [fieldDisplayName, setFieldDisplayName] = useState(null)
   const [searchTerm, setSearchTerm] = useState('')
-  const [currentStage, setCurrentStage] = useState(1) // Assuming you have a state for the current stage
+  const [currentStage, setCurrentStage] = useState(1)
 
   useEffect(() => {
     const fetchData = async () => {
