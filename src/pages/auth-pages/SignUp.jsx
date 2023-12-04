@@ -8,8 +8,9 @@ import google from '@assets/google.svg'
 import signupVector from '@assets/Vector photo signup.svg'
 import { MdInfo } from 'react-icons/md'
 import './scss/SignUp.scss'
-import ShowEye from '@components/ShowEye'
+import ShowEye from '@components/dropDownShowEye/ShowEye'
 import { useState } from 'react'
+import DropDown from '@components/dropDownShowEye/DropDown'
 
 const SignUp = () => {
   const [passwordVisible, setPasswordVisible] = useState(false)
@@ -27,12 +28,12 @@ const SignUp = () => {
         className='sign-up-frame-1 bg-primary border border-primary d-none d-lg-flex align-items-center w-50'
       >
         <div className='container d-flex flex-column justify-content-center align-items-center gap-5 p-1 '>
-          <Link to={'/home'}>
+          <Link to={'/'}>
             <img className='position-absolute tsa-logo ' src={tsalogo} alt='' />
           </Link>
 
           <img
-            className='img-vector img-fluid mb-5 signup-vector position-absolute '
+            className='signup-vector img-fluid mb-5 signup-vector position-absolute '
             src={signupVector}
             alt=''
             style={{
@@ -42,7 +43,7 @@ const SignUp = () => {
         </div>
       </div>
 
-      <div className='sign-up-section d-sm-flex p-5 my-5 mx-auto rounded-3 align-items-center'>
+      <div className='sign-up-section d-sm-flex p-10 my-5 mx-auto rounded-3 align-items-center'>
         <section className='section-for-signup'>
           <div className='sign-up-content-padding '>
             <div className='mb-4'>
@@ -69,20 +70,26 @@ const SignUp = () => {
                 <label className='fw-bold' htmlFor='community'>
                   Community Group
                 </label>
-                <select className=' p-2 rounded align-items-center' name='lists' id='' required>
-                  <option className='p-2' value='' disabled selected hidden>
-                    Select Community
-                  </option>
-                  <option className='' value=''>
-                    Data Analysis
-                  </option>
-                  <option className='' value=''>
-                    Web Development
-                  </option>
-                  <option className='' value=''>
-                    Product Design
-                  </option>
-                </select>
+                {/* <select
+                    className=" p-2 rounded align-items-center"
+                    name="lists"
+                    id=""
+                    required
+                  >
+                    <option className="p-2" value="" disabled selected hidden>
+                      Select Community
+                    </option>
+                    <option className="" value="">
+                      Data Analysis
+                    </option>
+                    <option className="" value="">
+                      Web Development
+                    </option>
+                    <option className="" value="">
+                      Product Design
+                    </option>
+                  </select> */}
+                <DropDown />
               </div>
               <div className='d-flex flex-column gap-1 mb-3'>
                 <label className='fw-bold' htmlFor='email'>
@@ -95,6 +102,20 @@ const SignUp = () => {
                   Input the email you used in registering at TechStudio.
                 </p>
                 <input className='p-2 rounded border-1' name='email' type='text' id='email' />
+              </div>
+
+              <div className='d-flex flex-column gap-1 mb-3'>
+                <label className='fw-bold' htmlFor='email'>
+                  Cohort
+                </label>
+
+                <input
+                  className='p-2 rounded border-1 
+                  cohort-background'
+                  name='email'
+                  type='text'
+                  id='email'
+                />
               </div>
 
               <div className='d-flex flex-column gap-1 mb-3'>
