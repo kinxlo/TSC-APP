@@ -1,29 +1,39 @@
 import { Route, Routes } from 'react-router-dom'
-import { DashboardHome, FinTalent, Login } from './pages'
-import { DashboardLayout } from './layout'
-import AuthLayout from './layouts/AuthLayout';
-import SignIn from './pages/SignIn';
-import SignUp from './pages/SignUp';
+import Home from './pages/external-pages/landing-page'
+import SignIn from './pages/auth-pages/SignIn'
+import SignUp from './pages/auth-pages/SignUp'
+import Community from './pages/external-pages/explore-community/Community'
+import DefaultLayout from './layout/defaultLayout/DefaultLayout'
+import AuthLayout from './layout/AuthLayout'
 
+/**
+ *
+ *this is place you will all put your routings
+ * it has been seperated using comments to indicate
+ * 1. auth page
+ * 2. external pages
+ * 3. dashboard pages
+ */
 
 export function App() {
   return (
     <Routes>
       {/* authentication */}
-      <Route path={`/login`} element={<Login />} />
-      <Route element={<AuthLayout/>}>
-            <Route path='/signin' element={<SignIn/>}/>
-            <Route path='/signup' element={<SignUp/>}/>
-          </Route>
+      <Route element={<AuthLayout />}>
+        <Route path='/signin' element={<SignIn />} />
+        <Route path='/signup' element={<SignUp />} />
+      </Route>
 
       {/* external pages */}
-      <Route index element={<FinTalent />} />
+      <Route element={<DefaultLayout />}>
+        <Route path={'/'} element={<Home />} />
+        <Route path='/community' element={<Community />} />
+      </Route>
 
       {/* dashboard */}
-      <Route path='/dashboard' element={<DashboardLayout />}>
-        <Route path='home' index element={<DashboardHome />} />
+      {/* <Route path='/dashboard' element={<DashboardLayout />}>
         <Route path='*' element={<h1>PAGE NOT FOUND</h1>} />
-      </Route>
+      </Route> */}
       <Route path='*' element={<h1>PAGE NOT FOUND</h1>} />
     </Routes>
   )
