@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
 p,
 a,
 input,
 button {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .body {
@@ -13,7 +13,7 @@ button {
   margin-inline: auto;
 }
 
-nav.navbar {
+/* nav.navbar {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -85,11 +85,11 @@ nav.navbar {
   font-size: 18px;
   line-height: 27px;
   letter-spacing: 2%;
-}
+} */
 
 /* =======DROPDOWN NAV BAR======== */
 
-.profile-dropdown .tabs-link {
+/* .profile-dropdown .tabs-link {
   color: #ffffff;
   transition: 0.3s ease-in-out;
   font-weight: 400;
@@ -132,11 +132,11 @@ nav.navbar {
 
 .bi-list {
   cursor: pointer;
-}
+} */
 
 /* ========================NAVBAR MQ========================== */
 
-@media (width < 576px) {
+/* @media (width < 576px) {
   .bluedrop {
     top: 70px;
   }
@@ -158,14 +158,14 @@ nav.navbar {
   .tabs-link:focus {
     font-weight: 700;
   }
-}
+} */
 /* ==============================================SEC 1======================================= */
 
 .all-form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-top: 100px;
-  margin-left: 80px;
+  margin-left: 120px;
 }
 
 .find {
@@ -179,7 +179,7 @@ nav.navbar {
   font-weight: 700;
   line-height: 54.47px;
   color: #1f2666;
-  padding-right: 100px;
+  padding-right: 80px;
 }
 
 .find .para {
@@ -189,7 +189,7 @@ nav.navbar {
   line-height: 30px;
   margin-top: 40px;
   color: #1e1e1e;
-  padding-right: 40px;
+  padding-right: 15px;
 }
 
 .form {
@@ -371,9 +371,9 @@ nav.navbar {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 75px;
+  margin-top: 100px;
   background-color: #f5f6fa;
-  padding: 70px 60px 100px 60px;
+  padding: 70px 0px 100px 0px;
 }
 
 .sec-2 .head-2 {
@@ -387,9 +387,9 @@ nav.navbar {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 40px;
+  gap: 50px;
   margin-top: 80px;
-  width: 1238px; /* Changed to max-width */
+  /* width: 1238px; Changed to max-width */
 }
 
 .card-1 {
@@ -726,11 +726,11 @@ nav.navbar {
 .form-2 {
   /* height: 655px; */
   background-color: #dce9fa;
-  padding: 70px 80px 70px 80px;
+  padding: 70px 120px 70px 120px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 143px;
+  gap: 107px;
 }
 
 .form-2 .help {
@@ -872,7 +872,7 @@ nav.navbar {
 
 /* ==============================================FOOTER======================================= */
 
-.footer {
+/* .footer {
   background-color: #1f2666;
   padding: 44px 80px 44px 80px;
   display: flex;
@@ -1024,11 +1024,11 @@ nav.navbar {
   gap: 33px;
 }
 
-/* =============MQ FOOTER================= */
+=============MQ FOOTER=================
 
-/* Media Queries for Responsive Design */
+Media Queries for Responsive Design
 
-/* 950px and below */
+950px and below
 @media (max-width: 950px) {
   .footer {
     padding: 30px;
@@ -1067,7 +1067,7 @@ nav.navbar {
   }
 }
 
-/* 750px and below */
+750px and below
 @media (max-width: 750px) {
   .footer .upper {
     flex-direction: column;
@@ -1102,16 +1102,16 @@ nav.navbar {
   }
 }
 
-/* 550px and below */
+550px and below
 @media (max-width: 550px) {
   .footer {
     padding: 20px;
   }
 }
 
-/* 375px and below */
+375px and below
 @media (max-width: 375px) {
   .footer {
     padding: 15px;
   }
-}
+} */

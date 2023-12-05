@@ -70,29 +70,29 @@ const FindTalent = () => {
     });
   };
 
-  // ======================SUBSCRIBE INPUT=====================
+  // ======================SUBSCRIBE INPUT FOOTER=====================
 
-  const [email, setEmail] = useState({
-    email: "",
-  });
+  // const [email, setEmail] = useState({
+  //   email: "",
+  // });
 
-  const handleChangemail = (event) => {
-    const { name, value } = event.target;
-    setEmail({
-      ...email,
-      [name]: value,
-    });
-  };
+  // const handleChangemail = (event) => {
+  //   const { name, value } = event.target;
+  //   setEmail({
+  //     ...email,
+  //     [name]: value,
+  //   });
+  // };
 
-  const handleSubmitemail = (event) => {
-    event.preventDefault();
-    // add form submission logic here
-    console.log("Form Submitted:", email);
-    // Reset the form after submission
-    setEmail({
-      email: "",
-    });
-  };
+  // const handleSubmitemail = (event) => {
+  //   event.preventDefault();
+  //   // add form submission logic here
+  //   console.log("Form Submitted:", email);
+  //   // Reset the form after submission
+  //   setEmail({
+  //     email: "",
+  //   });
+  // };
 
   // ==========================JSX=================================================================
 
@@ -100,8 +100,8 @@ const FindTalent = () => {
     <div className="body">
       {" "}
       {/* ============================================NAVBAR================================================= */}
-      <nav className="navbar fixed-top navbar-expand-lg navbar-dark">
-        <div className="container d-flex align-items-center">
+      {/* <nav className="navbar fixed-top navbar-expand-lg navbar-dark"> */}
+        {/* <div className="container d-flex align-items-center">
           <div className="logo">
             <Link to={`/home`}>
               <img
@@ -113,13 +113,13 @@ const FindTalent = () => {
           </div>
           <div className="tabs d-lg-flex d-md-none d-sm-none d-none">
             <Link
-              to={`/explorecommunity`}
+              to={`/community`}
               className="m-0 text-decoration-none tabs-link"
             >
               Explore Community
             </Link>
             <Link
-              to={`/findtalent`}
+              to={`/find-talent`}
               className="m-0 text-decoration-none tabs-link"
             >
               Find Talent
@@ -129,17 +129,17 @@ const FindTalent = () => {
             </Link>
           </div>
           <div className="auth d-lg-flex d-md-none d-sm-none d-none">
-            <Link to={`/register`} className="auth-link">
+            <Link to={`/signin`} className="auth-link">
               <button className="btn btn-primary">Register</button>
             </Link>
-            <Link to={`/login`} className="m-0 text-decoration-none auth-link">
+            <Link to={`/signup`} className="m-0 text-decoration-none auth-link">
               Login
             </Link>
-          </div>
+          </div> */}
 
           {/* <!-- =============MQ NAVBAR================= --> */}
 
-          <div className="drop d-lg-none d-md-flex d-sm-flex">
+          {/* <div className="drop d-lg-none d-md-flex d-sm-flex">
             <i
               className="bi bi-list fs-1 text-white"
               onClick={toggleDropdown}
@@ -149,7 +149,7 @@ const FindTalent = () => {
                 isDropdownOpen ? "active" : ""
               }`}
             >
-              <div className="bluedrop border d-flex flex-column gap-2 align-items-center justify-content-center py-3 rounded-2 end-0 px-5">
+              <div className="bluedrop border d-flex flex-column gap-2 align-items-center justify-content-center rounded-2 end-0">
                 <Link
                   to={`/explorecommunity`}
                   className="m-0 text-decoration-none text-center tabs-link"
@@ -181,9 +181,9 @@ const FindTalent = () => {
                 </Link>
               </div>
             </div>
-          </div>
-        </div>
-      </nav>
+          </div> */}
+        {/* </div> */}
+      {/* </nav> */}
       {/* <!-- =======================================SEC 1====================================== --> */}
       <section>
         <div className="all-form">
@@ -366,7 +366,7 @@ const FindTalent = () => {
         </div>
       </section>
       {/* <!-- =======================================FOOTER====================================== --> */}
-      <footer className="footer">
+      {/* <footer className="footer">
         <div className="upper">
           <div className="foot1">
             <img src="../../../src/assets/TSA community 3.png" alt="logo" />
@@ -432,7 +432,7 @@ const FindTalent = () => {
             </div>
           </div>
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 };

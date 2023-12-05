@@ -1,0 +1,77 @@
+// THIS FILE IS A RESET STYLE FILE IT WILL AFFECT THE CODE GLOBALLY
+// DON NOT EDIT ONLESS YOU KNOW WHAT YOU ARE DOING!
+
+@use '../utils' as utils;
+@use './colors' as colors;
+@use '../utils/functions' as fn;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+html {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-text-stroke-width: 0.1px;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  // display: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: colors.$base-bg;
+  color: colors.$text-dark;
+}
+
+a,
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a,
+a:visited,
+a:active {
+  cursor: pointer;
+  letter-spacing: fn.rem(0.2);
+  text-decoration: none;
+}
+
+button {
+  height: fn.rem(40);
+  outline: none;
+  border: none;
+}
+
+ul {
+  list-style: none;
+  color: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  letter-spacing: 0.5;
+}
+
+label {
+  font-size: fn.rem(14);
+}
+
+input,
+textarea,
+select {
+  height: fn.rem(40);
+  &::placeholder {
+    font-size: fn.rem(14);
+  }
+}
