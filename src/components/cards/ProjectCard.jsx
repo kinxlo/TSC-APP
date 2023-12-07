@@ -1,6 +1,6 @@
 import { Icon } from '@iconify/react'
 import React from 'react'
-import style from './card.module.scss'
+import style from './scss/card.module.scss'
 
 /**
  * STUDY THIS CARD COMPONENT PROPERLY...THIS IS HOW YOU CAN USE SCSS THAT THE STYLING WILL NOT
