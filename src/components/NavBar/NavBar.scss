@@ -17,12 +17,12 @@ nav.navbar {
   justify-content: center;
   background-color: #1f2666;
   height: 97px;
-  max-width: 1366px;
+  /* max-width: 1366px; */
   width: 100%;
   margin-inline: auto;
 }
 
-.container {
+/* .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,7 +30,7 @@ nav.navbar {
   width: 100%;
   margin-inline: auto;
   position: relative;
-}
+} */
 
 .logo {
   width: 175px;

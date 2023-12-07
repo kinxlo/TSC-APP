@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './NavBar.css'
+import './NavBar.scss'
 import techstudio from '@assets/image/TSA community 1.png'
 import { Link } from 'react-router-dom'
 import 'bootstrap-icons/font/bootstrap-icons.css'
@@ -34,7 +34,7 @@ const NavBar = () => {
     //     </div>
     //   </div>
     // </div>
-    <nav className='navbar fixed-top navbar-expand-lg navbar-dark'>
+    <nav className='navbar navbar-expand-lg navbar-dark'>
       <div className='container d-flex align-items-center'>
         <div className='logo'>
           <Link to={`/home`}>
