@@ -27,6 +27,7 @@
     "axios": "^1.2.1",
     "bootstrap": "^5.2.3",
     "bootstrap-icons": "^1.11.2",
+    "esbuild": "^0.19.8",
     "flowbite-react": "^0.6.4",
     "iconify": "^1.4.0",
     "jwt-decode": "^3.1.2",
