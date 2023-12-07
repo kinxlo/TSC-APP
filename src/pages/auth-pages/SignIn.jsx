@@ -9,9 +9,27 @@ import signinVector from '@assets/Vector photo sign in.svg'
 import './scss/SignIn.scss'
 import { useState } from 'react'
 import ShowEye from '@components/dropDownShowEye/ShowEye'
+import { useForm } from 'react-hook-form'
+import axios from 'axios'
 
 const SignIn = () => {
   const [passwordVisible, setPasswordVisible] = useState(false)
+
+  // const { register, handleSubmit } = useForm({
+  //   criteriaMode: 'all',
+  //   mode: 'onChange',
+  // })
+
+  const { register, handleSubmit } = useForm()
+
+  const handleFormSubmit = async (data) => {
+    console.log(data)
+    const res = await axios.post('http://localhost:7000/api/auth/login', data)
+    console.log(res.data)
+    if (res.status === 200) {
+      navigator(`/dashboard`)
+    }
+  }
 
   return (
     <div className='sign-in gap-5 d-flex position-relative '>
@@ -47,13 +65,13 @@ const SignIn = () => {
               <h2 className='fw-bold'>Welcome Back!</h2>
               <p className='fw-semi'>Let&apos;s Help You Get Into Your Account.</p>
             </div>
-            <form action=''>
+            <form onSubmit={handleSubmit(handleFormSubmit)} action=''>
               <div className='d-flex flex-column gap-1 mb-3'>
                 <label className='fw-bold' htmlFor='email'>
                   Email Address
                 </label>
 
-                <input className='p-2 rounded border-1' name='email' type='text' id='email' />
+                <input {...register('email')} className='p-2 rounded border-1' name='email' type='text' id='email' />
               </div>
 
               <div className='d-flex flex-column gap-1 mb-2'>
@@ -61,7 +79,13 @@ const SignIn = () => {
                   Password
                 </label>
                 <div className='position-relative'>
-                  <input className='w-100 p-2 rounded border-1' name='password' type={passwordVisible ? 'text' : 'password'} id='password' />
+                  <input
+                    {...register('password')}
+                    className='w-100 p-2 rounded border-1'
+                    name='password'
+                    type={passwordVisible ? 'text' : 'password'}
+                    id='password'
+                  />
 
                   <ShowEye
                     eyeState={passwordVisible}
