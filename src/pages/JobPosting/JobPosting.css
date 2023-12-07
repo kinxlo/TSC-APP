@@ -1,0 +1,775 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+
+p,
+a,
+input,
+button {
+  font-family: "Open Sans", sans-serif;
+}
+
+.body {
+  background-color: whitesmoke;
+  max-width: 1366px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.con {
+  padding: 0 100px;
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  gap: 294.26px;
+}
+
+.cancel {
+  font-size: 16px;
+  font-weight: 400;
+  color: #1e1e1e;
+  line-height: 21.79px;
+  margin-top: 108px;
+  border: 0;
+  background-color: #e3e3e3;
+  display: flex;
+  align-items: center;
+  padding: 15px 10px;
+  border-radius: 0;
+}
+
+.cancel img {
+  margin-right: 10px;
+  width: 10.74px;
+  height: 14.76px;
+}
+
+.con .maint {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1f2666;
+  line-height: 43.58px;
+}
+
+/* ==============MQ=========== */
+
+/* Media Queries for Responsive Design */
+
+/* 950px and below */
+@media (max-width: 950px) {
+  .con {
+    padding: 0 50px;
+    gap: 20px;
+  }
+
+  .cancel {
+    width: 180px;
+    font-size: 12px;
+    justify-content: center;
+  }
+}
+
+/* 750px and below */
+@media (max-width: 750px) {
+  .con {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* 550px and below */
+@media (max-width: 550px) {
+  .con {
+    padding: 0 15px;
+    gap: 10px;
+  }
+}
+
+/* 375px and below */
+@media (max-width: 375px) {
+  .con {
+    padding: 0 10px;
+    gap: 5px;
+  }
+
+  .con .maint {
+    font-size: 24px;
+  }
+}
+
+/* =========================================================fill 1=============================================================== */
+
+.bigf {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  margin: 54.24px 100px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  padding: 80px 80px 160px 80px;
+  border-radius: 5px;
+  position: relative;
+  border-top: 9px solid #0266f4;
+}
+
+.fill-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.fill-1 p {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
+  line-height: 27.24px;
+  text-align: start;
+}
+
+.fill-1 .in-1,
+.fill-1 .in-2 {
+  border: 1px solid #bababa;
+  border-radius: 5px;
+  padding: 20px 15px 20px 15px;
+  height: 51px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.fill-1 .in-1::placeholder,
+.fill-1 .in-2::placeholder {
+  font-size: 15px;
+  font-weight: 400;
+  color: #1e1e1e;
+  line-height: 24px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 950px) {
+  .fill-1 {
+    grid-template-columns: 1fr; /* Change to a single column layout */
+    gap: 20px; /* Reduce the gap between elements */
+  }
+
+  .bigf {
+    padding: 80px 60px 160px 60px;
+    margin: 54.24px 60px;
+  }
+}
+
+@media (max-width: 750px) {
+  .fill-1 .in-1,
+  .fill-1 .in-2 {
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .bigf {
+    padding: 80px 40px 160px 40px;
+    margin: 54.24px 40px;
+  }
+}
+
+@media (max-width: 550px) {
+  .fill-1 p {
+    font-size: 18px; /* Decrease font size for smaller screens */
+  }
+
+  .bigf {
+    padding: 80px 30px 160px 30px;
+    margin: 54.24px 30px;
+  }
+
+  .fill-1 .in-1::placeholder,
+  .fill-1 .in-2::placeholder {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 375px) {
+  .fill-1 .in-1,
+  .fill-1 .in-2 {
+    height: 40px; /* Adjust height for smaller screens */
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .fill-1 p {
+    font-size: 16px; /* Decrease font size further for smaller screens */
+  }
+
+  .bigf {
+    padding: 80px 20px 160px 20px;
+    margin: 54.24px 20px;
+  }
+}
+
+/* =======================================================FILL 2================================================================= */
+
+.fill-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.fill-2 p {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
+  line-height: 27.24px;
+  text-align: start;
+}
+
+.fill-2 .in-3,
+.fill-2 .in-4 {
+  border: 1px solid #bababa;
+  border-radius: 5px;
+  padding: 20px 15px 20px 15px;
+  height: 51px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.fill-2 .in-3::placeholder,
+.fill-2 .in-4::placeholder {
+  font-size: 15px;
+  font-weight: 400;
+  color: #1e1e1e;
+  line-height: 24px;
+}
+
+.inner-3,
+.inner-4 {
+  position: relative;
+}
+
+.in-img1,
+.in-img2 {
+  position: absolute;
+  right: 20px; /* Adjust the right position based on your design */
+  top: 40%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 950px) {
+  .fill-2 {
+    grid-template-columns: 1fr; /* Change to a single column layout */
+    gap: 20px; /* Reduce the gap between elements */
+  }
+
+  .in-img1,
+  .in-img2 {
+    transform: translate(-50%, 50%);
+    right: 14px;
+  }
+}
+
+@media (max-width: 750px) {
+  .fill-2 .in-3,
+  .fill-2 .in-4 {
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 550px) {
+  .fill-2 p {
+    font-size: 18px; /* Decrease font size for smaller screens */
+  }
+
+  .fill-2 .in-3::placeholder,
+  .fill-2 .in-4::placeholder {
+    font-size: 10px;
+  }
+
+  .fill-2 .in-4 {
+    padding: 20px 40px 20px 15px;
+  }
+}
+
+@media (max-width: 375px) {
+  .fill-2 .in-3,
+  .fill-2 .in-4 {
+    height: 40px; /* Adjust height for smaller screens */
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .fill-2 p {
+    font-size: 16px; /* Decrease font size further for smaller screens */
+  }
+}
+
+/* ======================FILL 2 DROPDOWN======================= */
+
+.dropdown {
+  position: absolute;
+  background-color: whitesmoke;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  /* padding: 10px; */
+  width: 100%;
+  margin-top: 5px;
+  z-index: 1;
+}
+
+.dropdown div {
+  cursor: pointer;
+  padding: 15px 5px;
+  border: 1px solid gray;
+}
+
+.dropdown div:hover {
+  background-color: gray;
+}
+
+.dropdown div p {
+  font-size: 16px;
+}
+
+.dropdown div p:hover {
+  color: #ffffff;
+}
+
+/* =====================================================FILL 3================================================================ */
+
+.fill-3 p {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
+  line-height: 27.24px;
+  text-align: start;
+}
+
+.fill-3 textarea {
+  border: 1px solid #bababa;
+  border-radius: 5px;
+  padding: 20px 15px 20px 15px;
+  margin-top: 10px;
+  width: 100%; /* Make the textarea width 100% */
+  box-sizing: border-box; /* Include padding and border in the width calculation */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 950px) {
+  .fill-3 textarea {
+    cols: 100%; /* Adjust the number of columns for smaller screens */
+  }
+}
+
+@media (max-width: 750px) {
+  .fill-3 p {
+    font-size: 18px; /* Decrease font size for smaller screens */
+  }
+}
+
+@media (max-width: 550px) {
+  .fill-3 textarea {
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .fill-3 textarea::placeholder {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 375px) {
+  .fill-3 textarea {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .fill-3 p {
+    font-size: 16px; /* Decrease font size further for smaller screens */
+  }
+}
+
+/* ===================================================FILL 4=================================================================== */
+
+.fill-4 p {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
+  line-height: 27.24px;
+  text-align: start;
+}
+
+.fill-4 textarea {
+  border: 1px solid #bababa;
+  border-radius: 5px;
+  padding: 20px 15px 20px 15px;
+  margin-top: 10px;
+  width: 100%; /* Make the textarea width 100% */
+  box-sizing: border-box; /* Include padding and border in the width calculation */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 950px) {
+  .fill-4 textarea {
+    cols: 100%; /* Adjust the number of columns for smaller screens */
+  }
+}
+
+@media (max-width: 750px) {
+  .fill-4 p {
+    font-size: 18px; /* Decrease font size for smaller screens */
+  }
+}
+
+@media (max-width: 550px) {
+  .fill-4 textarea {
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .fill-4 textarea::placeholder {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 375px) {
+  .fill-4 textarea {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .fill-4 p {
+    font-size: 16px; /* Decrease font size further for smaller screens */
+  }
+}
+
+/* ========================================================FILL 5================================================================= */
+
+/* Default styles */
+.fill-5 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.inner-5 .skills,
+.inner-6 .tools {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
+  line-height: 27.24px;
+  text-align: start;
+}
+
+.fill-5 .in-5,
+.fill-5 .in-6 {
+  border: 1px solid #bababa;
+  border-radius: 5px;
+  padding: 20px 15px 20px 15px;
+  height: 51px;
+  margin-top: 10px;
+  width: 100%;
+  box-sizing: border-box; /* Include padding and border in the width calculation */
+}
+
+.fill-5 .in-5::placeholder,
+.fill-5 .in-6::placeholder {
+  font-size: 15px;
+  font-weight: 400;
+  color: #1e1e1e;
+  line-height: 24px;
+}
+
+.bot-5 .b-1,
+.bot-5 .b-2,
+.bot-6 .b-3,
+.bot-6 .b-4 {
+  display: flex;
+  /* flex-wrap: wrap; Allow items to wrap to the next line on smaller screens */
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.bot-5 .b-1 button,
+.bot-5 .b-2 button,
+.bot-6 .b-3 button,
+.bot-6 .b-4 button {
+  background-color: #c6c6c6;
+  border-radius: 5px;
+  padding: 10px 20px 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 22px;
+  text-align: start;
+  cursor: pointer;
+  border: 0;
+}
+
+.bot-5 .b-1 button:focus,
+.bot-5 .b-2 button:focus,
+.bot-6 .b-3 button:focus,
+.bot-6 .b-4 button:focus {
+  background-color: gray;
+}
+
+.in-img5,
+.in-img6 {
+  position: relative;
+}
+
+.inimg5,
+.inimg6 {
+  position: absolute;
+  left: 95%; /* Move the plus icon to the right edge of the input */
+  bottom: 44%; /* Align the plus icon vertically centered */
+  transform: translate(-50%, 50%);
+  cursor: pointer;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 950px) {
+  .fill-5 {
+    grid-template-columns: 1fr; /* Change to a single column layout */
+    gap: 20px; /* Reduce the gap between elements */
+  }
+}
+
+@media (max-width: 750px) {
+  .fill-5 .in-5,
+  .fill-5 .in-6 {
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .bot-5 .b-1,
+  .bot-5 .b-2,
+  .bot-6 .b-3,
+  .bot-6 .b-4 {
+    flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+  }
+}
+
+@media (max-width: 550px) {
+  .inner-5 .skills,
+  .inner-6 .tools {
+    font-size: 18px; /* Decrease font size for smaller screens */
+  }
+
+  .bot-5 .b-1 button,
+  .bot-5 .b-2 button,
+  .bot-6 .b-3 button,
+  .bot-6 .b-4 button {
+    flex-basis: 100%; /* Make items full-width on smaller screens */
+  }
+
+  .fill-5 .in-5::placeholder,
+  .fill-5 .in-6::placeholder {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 375px) {
+  .fill-5 .in-5,
+  .fill-5 .in-6 {
+    height: 40px; /* Adjust height for smaller screens */
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .inner-5 .skills,
+  .inner-6 .tools {
+    font-size: 16px; /* Decrease font size further for smaller screens */
+  }
+}
+
+/* ========================================================FILL 6===================================================================== */
+
+.fill-6 p {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
+  line-height: 27.24px;
+  text-align: start;
+}
+
+.fill-6 textarea {
+  border: 1px solid #bababa;
+  border-radius: 5px;
+  padding: 20px 15px 20px 15px;
+  margin-top: 10px;
+  width: 100%; /* Make the textarea width 100% */
+  box-sizing: border-box; /* Include padding and border in the width calculation */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 950px) {
+  .fill-6 textarea {
+    cols: 100%; /* Adjust the number of columns for smaller screens */
+  }
+}
+
+@media (max-width: 750px) {
+  .fill-6 p {
+    font-size: 18px; /* Decrease font size for smaller screens */
+  }
+}
+
+@media (max-width: 550px) {
+  .fill-6 textarea {
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .fill-6 textarea::placeholder {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 375px) {
+  .fill-6 textarea {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .fill-6 p {
+    font-size: 16px; /* Decrease font size further for smaller screens */
+  }
+}
+
+/* ===============================================================FILL 7========================================================================= */
+
+.fill-7 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.fill-7 p {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
+  line-height: 27.24px;
+  text-align: start;
+}
+
+.fill-7 .in-7,
+.fill-7 .in-8 {
+  border: 1px solid #bababa;
+  border-radius: 5px;
+  padding: 20px 15px 20px 15px;
+  height: 51px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.fill-7 .in-7::placeholder,
+.fill-7 .in-8::placeholder {
+  font-size: 15px;
+  font-weight: 400;
+  color: #1e1e1e;
+  line-height: 24px;
+}
+
+.inner-7,
+.inner-8 {
+  position: relative;
+}
+
+.in-img7,
+.in-img8 {
+  position: absolute;
+  right: 20px; /* Adjust the right position based on your design */
+  top: 40%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 950px) {
+  .fill-7 {
+    grid-template-columns: 1fr; /* Change to a single column layout */
+    gap: 20px; /* Reduce the gap between elements */
+    margin-bottom: 80px;
+  }
+
+  .in-img7,
+  .in-img8 {
+    transform: translate(-50%, 50%);
+    right: 14px;
+  }
+}
+
+@media (max-width: 750px) {
+  .fill-7 .in-7,
+  .fill-7 .in-8 {
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 550px) {
+  .fill-7 p {
+    font-size: 18px; /* Decrease font size for smaller screens */
+  }
+
+  .fill-7 .in-7::placeholder,
+  .fill-7 .in-8::placeholder {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 375px) {
+  .fill-7 .in-7,
+  .fill-7 .in-8 {
+    height: 40px; /* Adjust height for smaller screens */
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .fill-7 p {
+    font-size: 16px; /* Decrease font size further for smaller screens */
+  }
+}
+
+/* =======================================================FILL 10============================================================== */
+
+.fill-10 {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 0;
+  width: 100%;
+  max-width: 1148px;
+  height: 84px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0.5px;
+  background-color: whitesmoke;
+  padding-right: 20px;
+}
+
+.fill-10 .canc,
+.fill-10 .subm {
+  border-radius: 5px;
+  padding: 0 20px; /* Adjust padding for smaller screens */
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 44px;
+}
+
+.fill-10 .canc {
+  border: 1px solid #ce1126;
+  background-color: whitesmoke;
+  color: #ce1126;
+}
+
+.fill-10 .subm {
+  border: 0;
+  background-color: #0266f4;
+  color: #ffffff;
+  height: 44px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 950px) {
+  .fill-10 {
+    flex-direction: column; /* Stack buttons vertically on smaller screens */
+
+    justify-content: center;
+    align-items: center; /* Align buttons to the start on smaller screens */
+    padding: 0 7%; /* Adjust padding for smaller screens */
+    padding-bottom: 5px;
+
+    height: 150px;
+  }
+
+  .fill-10 .canc,
+  .fill-10 .subm {
+    width: 100%; /* Make buttons full-width on smaller screens */
+  }
+}

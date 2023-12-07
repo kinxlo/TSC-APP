@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { useEffect, useState } from 'react'
-import { Image, Col, Row, Container } from 'react-bootstrap'
+import { Col, Row, Container } from 'react-bootstrap'
 import axios from 'axios'
 import './scss/style.scss'
 // import { Link } from 'react-router-dom'
@@ -9,8 +9,9 @@ import { IoChevronDownSharp } from 'react-icons/io5'
 // import { CiMenuBurger } from 'react-icons/ci'
 import { MdOutlineNavigateNext } from 'react-icons/md'
 // import { FaInstagram, FaLinkedin, FaTwitter, FaFacebook } from 'react-icons/fa'
-import Footer from '../../../components/Footer/Footer'
-import NavBar from '../../../components/NavBar/NavBar'
+// import Footer from '../../../components/Footer/Footer'
+// import NavBar from '../../../components/NavBar/NavBar'
+import StudentCard from '../../../components/cards/StudentCard'
 
 export default function Community() {
   const [members, setMembers] = useState([])
@@ -122,16 +123,9 @@ export default function Community() {
         {filteredMembers.length > 0 ? (
           <>
             <Row className='d-flex justify-content-center align-items-center gap-5'>
-              {filteredMembers.slice((currentStage - 1) * itemsPerPage, currentStage * itemsPerPage).map((member, index) => (
+              {filteredMembers.slice((currentStage - 1) * itemsPerPage, currentStage * itemsPerPage).map((student, index) => (
                 <Col xs={2} md={4} lg={6} key={index} style={{ width: '295px', height: '264px', marginBottom: '40px' }} className='custom-card'>
-                  <div className='d-flex flex-column justify-content-center align-items-center h-100'>
-                    <Image alt='Bonnie image' src={member.image} style={{ maxWidth: '164px' }} className='mb-3 rounded-circle' />
-                    <p className='mb-1' style={{ fontWeight: '800' }}>
-                      {member.name}
-                    </p>
-                    <span className='text-sm text-gray-500 dark:text-gray-400'>{member.field}</span>
-                    <span>{member.cohort}</span>
-                  </div>
+                  <StudentCard key={index} student={student} name={student.name} />
                 </Col>
               ))}
             </Row>

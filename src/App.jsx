@@ -1,10 +1,11 @@
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/external-pages/landing-page'
-import AuthLayout from './layout/AuthLayout'
 import SignIn from './pages/auth-pages/SignIn'
 import SignUp from './pages/auth-pages/SignUp'
 import Community from './pages/external-pages/explore-community/Community'
 import DefaultLayout from './layout/defaultLayout/DefaultLayout'
+import AuthLayout from './layout/AuthLayout'
+import FindTalent from './pages/FindTalent/FindTalent'
 
 /**
  *
@@ -28,6 +29,7 @@ export function App() {
       <Route element={<DefaultLayout />}>
         <Route path={'/'} element={<Home />} />
         <Route path='/community' element={<Community />} />
+        <Route path='/find-talent' element={<FindTalent />} />
       </Route>
 
       {/* dashboard */}
