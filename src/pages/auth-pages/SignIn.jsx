@@ -7,7 +7,7 @@ import twitter from "@assets/twitter.svg";
 import facebook from "@assets/facebook.svg";
 import google from "@assets/google.svg";
 import signinVector from "@assets/Vector photo sign in.svg";
-import "@scss/auth/SignIn.css";
+import "./scss/SignIn.scss";
 import { useState } from "react";
 import ShowEye from "@components/ShowEye";
 
@@ -29,7 +29,7 @@ const SignIn = () => {
         <div
 
         className="img-sign-in container d-flex flex-column justify-content-center align-items-center gap-5 p-1 ">
-          <Link to={"/home"}>
+          <Link to={"/"}>
             <img className="position-absolute tsa-logo " src={tsalogo} alt="" />
           </Link>
 

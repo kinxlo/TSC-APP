@@ -1,12 +1,20 @@
 import { Route, Routes } from 'react-router-dom'
-// import { DashboardHome, Login, Community } from './pages'
-import { DashboardLayout } from './layout'
-import './App.css'
-import Home from './pages/external-pages/landing-page/Home/Home'
+import Home from './pages/external-pages/landing-page'
 import AuthLayout from './layout/AuthLayout'
 import SignIn from './pages/auth-pages/SignIn'
 import SignUp from './pages/auth-pages/SignUp'
 import Community from './pages/external-pages/explore-community/Community'
+import DefaultLayout from './layout/defaultLayout/DefaultLayout'
+import FindTalent from './pages/FindTalent/FindTalent'
+
+/**
+ *
+ *this is place you will all put your routings
+ * it has been seperated using comments to indicate
+ * 1. auth page
+ * 2. external pages
+ * 3. dashboard pages
+ */
 
 export function App() {
   return (
@@ -18,14 +26,16 @@ export function App() {
       </Route>
 
       {/* external pages */}
-      <Route index element={<Home />} />
-      <Route path='/community' element={<Community />} />
+      <Route element={<DefaultLayout />}>
+        <Route path={'/'} element={<Home />} />
+        <Route path='/community' element={<Community />} />
+        <Route path='/find-talent' element={<FindTalent />} />
+      </Route>
 
       {/* dashboard */}
-      <Route path='/dashboard' element={<DashboardLayout />}>
-        {/* <Route path='home' index element={<DashboardHome />} /> */}
+      {/* <Route path='/dashboard' element={<DashboardLayout />}>
         <Route path='*' element={<h1>PAGE NOT FOUND</h1>} />
-      </Route>
+      </Route> */}
       <Route path='*' element={<h1>PAGE NOT FOUND</h1>} />
     </Routes>
   )
