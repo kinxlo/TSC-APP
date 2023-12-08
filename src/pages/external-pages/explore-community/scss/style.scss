@@ -1,5 +1,4 @@
-
-
+@use '../../../../scss/utils/functions' as fn;
 // .navAndFoot{
 //   background-color: #1f2666;
 //   padding: 0 100px 0 100px;
@@ -21,7 +20,6 @@
 //     max-width: 9rem;
 //   }
 // }
-
 
 // .custom-card {
 //   background-color: #d2d4e0 !important;
@@ -93,3 +91,62 @@
 //     padding: 0 100px 0 100px !important;
 //   }
 // }
+h1 {
+  font-size: 3.3333333333333335vw !important;
+}
+.hero-p1 {
+  font-size: 2.7777777777777777vw;
+}
+.hero-p2 {
+  font-size: 2.4305555555555554vw;
+}
+.dropdown-width {
+  width: fn.rem(200);
+}
+
+.dropdown-item:hover {
+  background-color: blue !important;
+  color: white !important;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .search-input {
+    &::placeholder {
+      padding-left: fn.rem(10);
+      font-weight: bold;
+    }
+  }
+
+  .search-icon {
+    position: absolute;
+    font-size: fn.rem(24);
+    right: fn.rem(10);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 2rem !important;
+  }
+
+  .hero-p1 {
+    font-size: 1.5rem !important;
+  }
+
+  .hero-p2 {
+    font-size: 1rem !important;
+  }
+  .search-box {
+    max-width: fn.rem(171) !important;
+    .search-input::placeholder {
+      padding-left: fn.rem(10);
+      font-size: fn.rem(10);
+    }
+  }
+}
