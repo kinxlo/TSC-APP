@@ -3,7 +3,7 @@ import { MdOutlineNavigateNext } from 'react-icons/md'
 export default function StageClick(props) {
   const { totalStages, currentStage, handleStageClick } = props
   return (
-    <div className='text-center d-flex justify-content-center align-items-center gap-6' style={{ marginBottom: '40px' }}>
+    <div className='d-none d-md-flex d-lg-flex text-center d-flex justify-content-center align-items-center gap-6' style={{ marginBottom: '40px' }}>
       {[...Array(totalStages)].map((_, stage) => (
         <button
           key={stage + 1}
