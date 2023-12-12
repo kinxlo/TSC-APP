@@ -15,8 +15,8 @@ const StudentCard = (props) => {
     <>
       <StudentContactModal name={props.name} />
       <div onClick={handleClick} className='d-flex flex-column justify-content-center align-items-center h-100'>
-        <Image alt='Bonnie image' src={props.student.image} style={{ maxWidth: '164px' }} className='mb-3 rounded-circle' />
-        <p className='mb-1' style={{ fontWeight: '800' }}>
+        <Image alt='Bonnie image' src={props.student.image} style={{ maxWidth: '164px' }} className={`mb-3 rounded-circle`} />
+        <p className='mb-1 studentCard-imageHover' style={{ fontWeight: '800' }}>
           {props.student.name}
         </p>
         <span className='text-sm text-gray-500 dark:text-gray-400'>{props.student.field}</span>
