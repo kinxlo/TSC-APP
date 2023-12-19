@@ -1,19 +1,22 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
 import { Image } from 'react-bootstrap'
-import StudentContactModal from '../modals/StudentContactModal'
+import SendMessageModal from '../modals/SendMessageModal'
 import * as bootstrap from 'bootstrap/dist/js/bootstrap'
+import SuccessMessage from '../modals/SuccessMessage'
 
 const StudentCard = (props) => {
-  const handleClick = () => {
-    console.log(`clicked`)
-    // let modal = bootstrap.Modal.getOrCreateInstance(document.getElementById(`student-modal`))
+ 
+  const handleClick = () => 
     let modal = bootstrap.Modal.getOrCreateInstance(document.getElementById(`student-modal-${props.name}`))
     modal.show()
+  
+    
   }
   return (
     <>
-      <StudentContactModal name={props.name} />
+      <SendMessageModal name={props.name} image={props.student.image} field={props.student.field} cohort={props.student.cohort}/>
+    
       <div onClick={handleClick} className='d-flex flex-column justify-content-center align-items-center h-100'>
         <Image alt='Bonnie image' src={props.student.image} style={{ maxWidth: '164px' }} className={`mb-3 rounded-circle`} />
         <p className='mb-1 studentCard-imageHover' style={{ fontWeight: '800' }}>

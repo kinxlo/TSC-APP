@@ -18,6 +18,7 @@ export default function Community() {
   const [loadingIntersection, setLoadingIntersection] = useState(false)
   const [hasMore, setHasMore] = useState(false)
 
+  
   const observer = useRef()
   const itemsPerStageDesktop = 28
   const itemsPerStageMobile = 14
