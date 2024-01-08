@@ -6,6 +6,7 @@ import Community from './pages/external-pages/explore-community/Community'
 import DefaultLayout from './layout/defaultLayout/DefaultLayout'
 import AuthLayout from './layout/AuthLayout'
 import FindTalent from './pages/FindTalent/FindTalent'
+import JobPosting from './pages/JobPosting/JobPosting'
 
 /**
  *
@@ -30,6 +31,7 @@ export function App() {
         <Route path={'/'} element={<Home />} />
         <Route path='/community' element={<Community />} />
         <Route path='/find-talent' element={<FindTalent />} />
+        <Route path='/jobposting' element={<JobPosting />} />
       </Route>
 
       {/* dashboard */}
